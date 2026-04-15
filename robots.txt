@@ -1,0 +1,5 @@
+# https://4pos.co.za — update the sitemap URL if your live domain differs
+User-agent: *
+Allow: /
+
+Sitemap: https://4pos.co.za/sitemap.xml
