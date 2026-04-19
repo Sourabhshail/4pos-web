@@ -318,11 +318,6 @@
         <h2 class="section-title">One payment. No surprises.</h2>
         <p class="section-sub centered">Pay once and use 4POS forever — no monthly fees, no hidden costs, free upgrades
           for life.</p>
-        <div class="pricing-toggle"> <span class="toggle-label active" id="tl-once">Once-off</span>
-          <div class="toggle-track" id="pricingToggle" onclick="togglePricing()">
-            <div class="toggle-thumb"></div>
-          </div> <span class="toggle-label" id="tl-rent">Rent monthly</span> <span class="save-badge">Save 40%</span>
-        </div>
         <div class="pricing-grid">
           <div class="pricing-card reveal reveal-d1">
             <div class="pricing-plan">Starter</div>
@@ -401,58 +396,7 @@
           </div>
         </div>
       </div>
-    </section> <!-- SUPPORT & TRAINING PACKAGES -->
-    <section id="support-training">
-      <div class="container">
-        <div class="training-highlight">
-          <div class="text-center" style="margin-bottom:8px"><span class="section-tag">Support &amp; training</span>
-          </div>
-          <h2 class="training-highlight-title text-center" style="max-width:720px;margin-left:auto;margin-right:auto">
-            Live help packages — first month free on new licences</h2>
-          <p class="training-highlight-sub text-center" style="margin-left:auto;margin-right:auto">After your
-            <strong>free first month</strong> of basic training and installation support on every new purchase, choose
-            optional paid time whenever you need deeper help.</p>
-          <div class="training-free-banner" role="note"> <svg viewBox="0 0 24 24" aria-hidden="true">
-              <path
-                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
-            </svg>
-            <div> <strong>New purchase? Your first month is on us</strong> Basic training and installation support is
-              <strong>free of charge for the first month</strong> after each new licence — then add packages only if you
-              want more hands-on time. </div>
-          </div>
-          <div class="training-tier-grid">
-            <article class="training-tier">
-              <p class="training-tier-label">Pay as you go</p>
-              <p class="training-tier-amount"><span class="training-tier-curr">R</span>500</p>
-              <p class="training-tier-desc">Hourly support — <strong>as we go</strong>.</p>
-            </article>
-            <article class="training-tier">
-              <p class="training-tier-label">Monthly care</p>
-              <p class="training-tier-amount"><span class="training-tier-curr">R</span>3,000</p>
-              <p class="training-tier-desc">Monthly package (max <strong>10 hours</strong>) — <strong>once off</strong>.
-              </p>
-            </article>
-            <article class="training-tier">
-              <p class="training-tier-label">Power user</p>
-              <p class="training-tier-amount"><span class="training-tier-curr">R</span>5,000</p>
-              <p class="training-tier-desc">Yearly package (max <strong>20 hours</strong>) — <strong>once off</strong>.
-              </p>
-            </article>
-          </div>
-          <div class="support-card" style="margin-top:20px;background:var(--white)">
-            <h2 style="margin:0 0 10px">Pricing For Old 4POS Conversion</h2>
-            <ul style="margin:0 0 0 1.2em">
-              <li>Conversion from old version costs <strong>R2,000</strong> (database conversion).</li>
-              <li>Separate licence for each PC: <strong>R999 × number of PCs</strong>.</li>
-            </ul>
-          </div>
-          <p class="training-footnote text-center">Confirm hours, currency, and VAT with our team before purchase — full
-            wording and booking on the Support page.</p>
-          <div class="training-highlight-cta"> <a href="support.html#training-costs" class="btn btn-primary">View full
-              details</a> <a href="#contact" class="btn btn-ghost">Enquire now</a> </div>
-        </div>
-      </div>
-    </section> <!-- TESTIMONIALS -->
+    </section>
     <section id="testimonials">
       <div class="container">
         <div class="text-center"><span class="section-tag">Reviews</span>
@@ -834,14 +778,7 @@
     const cntObs = new IntersectionObserver(entries => {
       entries.forEach(e => { if (e.isIntersecting) { const el = e.target, t = parseInt(el.dataset.target), s = el.dataset.suffix || ''; animateNum(el, t, s); cntObs.unobserve(el); } });
     }, { threshold: 0.5 });
-    document.querySelectorAll('.count-up').forEach(el => cntObs.observe(el)); /* PRICING TOGGLE */
-    let isRent = false;
-    const pd = {
-      once: [{ id: 'p1', val: '999', period: 'once-off · 1 PC licence' }, { id: 'p2', val: '1,999', period: 'once-off · up to 3 PC licences' }], rent: [{ id: 'p1', val: '199', period: 'per month · 1 PC licence' }, { id: 'p2', val: '399', period: 'per month · up to 3 PC licences' }]
-    };
-    function togglePricing() {
-      isRent = !isRent; document.getElementById('pricingToggle').classList.toggle('rent', isRent); document.getElementById('tl-once').classList.toggle('active', !isRent); document.getElementById('tl-rent').classList.toggle('active', isRent); const data = isRent ? pd.rent : pd.once; data.forEach(p => { const a = document.getElementById(p.id), b = document.getElementById(p.id + 'p'); if (a) a.textContent = p.val; if (b) b.textContent = p.period; });
-    } /* FAQ */
+    document.querySelectorAll('.count-up').forEach(el => cntObs.observe(el)); /* FAQ */
     function toggleFaq(btn) {
       const item = btn.parentElement; const wasOpen = item.classList.contains('open'); document.querySelectorAll('.faq-item.open').forEach(i => { i.classList.remove('open'); i.querySelector('.faq-a').style.maxHeight = '0'; }); if (!wasOpen) { item.classList.add('open'); const a = item.querySelector('.faq-a'); a.style.maxHeight = a.scrollHeight + 'px'; }
     }
