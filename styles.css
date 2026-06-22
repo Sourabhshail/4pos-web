@@ -199,6 +199,27 @@ section{padding:100px 32px}
 .chk svg{width:10px;height:10px;fill:var(--green)}
 .pricing-card.featured .chk{background:rgba(15,168,112,.2)}
 .pricing-btn{width:100%;display:block;text-align:center;padding:13px;border-radius:var(--r-md);font-family:'Sora',sans-serif;font-size:14px;font-weight:700;cursor:pointer;text-decoration:none;transition:all .2s;border:1.5px solid var(--border);background:transparent;color:var(--dark)}
+button.pricing-btn{appearance:none;-webkit-appearance:none}
+.pricing-btn:disabled{opacity:.7;cursor:wait}
+.pricing-payment-note{max-width:560px;margin:28px auto 0;font-size:14px;color:var(--mid-grey);line-height:1.6}
+.pricing-custom-pay{
+  max-width:640px;margin:32px auto 0;padding:28px 26px 26px;text-align:left;
+  border:1.5px solid var(--border);border-radius:var(--r-xl);background:var(--off-white);
+  box-shadow:var(--shadow-sm);
+}
+.pricing-custom-title{font-family:'Sora',sans-serif;font-size:22px;font-weight:800;color:var(--dark);margin:0 0 8px;letter-spacing:-.02em;text-align:center}
+.pricing-custom-sub{font-size:14px;color:var(--mid-grey);line-height:1.6;margin:0 0 20px;text-align:center}
+.pricing-custom-form{margin:0}
+.pricing-custom-fields{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:18px}
+.pricing-custom-field{margin-bottom:0}
+.pricing-custom-optional{font-weight:400;color:var(--mid-grey)}
+.pricing-custom-amount-wrap{display:flex;align-items:center;gap:8px;padding:0 16px;border:1.5px solid var(--border);border-radius:var(--r-sm);background:var(--white);transition:border-color .2s,box-shadow .2s}
+.pricing-custom-amount-wrap:focus-within{border-color:var(--accent);box-shadow:0 0 0 3px rgba(26,108,255,.12)}
+.pricing-custom-curr{font-family:'Sora',sans-serif;font-size:18px;font-weight:700;color:var(--dark)}
+.pricing-custom-amount-wrap input{border:none;box-shadow:none;padding:12px 0;flex:1;min-width:0;background:transparent}
+.pricing-custom-amount-wrap input:focus{box-shadow:none}
+.pricing-custom-submit{max-width:280px;margin:0 auto}
+@media(max-width:640px){.pricing-custom-fields{grid-template-columns:1fr}}
 .pricing-btn:hover{border-color:var(--dark);background:var(--off-white)}
 .pricing-btn.pri{background:var(--accent);color:white;border-color:var(--accent)}
 .pricing-btn.pri:hover{background:var(--accent-dark);border-color:var(--accent-dark);box-shadow:0 6px 20px rgba(26,108,255,.3)}
@@ -400,6 +421,7 @@ footer{padding:60px 32px 36px;background:#0d1117;color:rgba(255,255,255,.38)}
 .training-tier-amount{font-family:'Sora',sans-serif;font-size:clamp(32px,4vw,42px);font-weight:800;color:var(--accent);letter-spacing:-.04em;line-height:1;margin-bottom:8px}
 .training-tier-curr{font-size:18px;font-weight:700;vertical-align:super;margin-right:2px;opacity:.9}
 .training-tier-desc{font-size:14px;color:var(--dark-2);line-height:1.55;font-weight:400;margin:0}
+.training-tier-btn{margin-top:16px}
 .training-highlight p.training-footnote{font-size:13px;color:var(--mid-grey);line-height:1.6;margin:0 auto;font-weight:300;text-align:center;max-width:640px}
 .training-highlight-cta{margin-top:22px;display:flex;flex-wrap:wrap;gap:12px;justify-content:center;align-items:center}
 .training-highlight-cta .btn{text-decoration:none;margin:0}
