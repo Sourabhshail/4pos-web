@@ -1,2 +1,7 @@
 razorpay.env
 .DS_Store
+bin/
+obj/
+publish/
+logs/
+*.user

@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>FourPosWeb</RootNamespace>
+    <AssemblyName>4pos-web</AssemblyName>
+  </PropertyGroup>
+
+  <!-- Publish the existing static site next to the API DLL for IIS. -->
+  <ItemGroup>
+    <Content Include="*.html" CopyToPublishDirectory="PreserveNewest" />
+    <Content Include="*.css" CopyToPublishDirectory="PreserveNewest" />
+    <Content Include="sitemap.xml" CopyToPublishDirectory="PreserveNewest" Condition="Exists('sitemap.xml')" />
+    <Content Include="robots.txt" CopyToPublishDirectory="PreserveNewest" Condition="Exists('robots.txt')" />
+    <Content Include="assets/**" CopyToPublishDirectory="PreserveNewest" />
+    <Content Include="razorpay.env.example" CopyToPublishDirectory="PreserveNewest" />
+    <Content Update="web.config" CopyToPublishDirectory="PreserveNewest" />
+    <Content Remove="razorpay.env" />
+    <Content Remove="bin/**" />
+    <Content Remove="obj/**" />
+    <Content Remove="publish/**" />
+  </ItemGroup>
+</Project>
