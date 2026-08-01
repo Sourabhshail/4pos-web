@@ -129,7 +129,7 @@
     if (!config || !config.plans[planId]) return;
 
     if (!config.keyId || config.keyId.includes('REPLACE')) {
-      alert('Razorpay is not configured yet. Add your Key ID in assets/js/razorpay-config.js and start razorpay-server.py.');
+      alert('Razorpay is not configured yet. Add your Key ID in assets/js/razorpay-config.js and start razorpay-server.js.');
       return;
     }
 
@@ -173,7 +173,7 @@
 
   async function startCustomCheckout(form, btn) {
     if (!config.keyId || config.keyId.includes('REPLACE')) {
-      alert('Razorpay is not configured yet. Add your Key ID in assets/js/razorpay-config.js and start razorpay-server.py.');
+      alert('Razorpay is not configured yet. Add your Key ID in assets/js/razorpay-config.js and start razorpay-server.js.');
       return;
     }
 

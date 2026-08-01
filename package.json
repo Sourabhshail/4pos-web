@@ -1,0 +1,14 @@
+{
+  "name": "4pos-web",
+  "version": "1.0.0",
+  "private": true,
+  "description": "4POS website with Razorpay checkout server",
+  "main": "razorpay-server.js",
+  "scripts": {
+    "start": "node razorpay-server.js",
+    "server": "node razorpay-server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
